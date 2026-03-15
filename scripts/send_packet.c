@@ -11,7 +11,7 @@
 
 // COMPILE USING sudo gcc probe_bl1.c -o probe_bl1 -lusb-1.0
 
-int main() {
+int main(int argc, char *argv[]) {
     libusb_context *ctx = NULL;
     libusb_device_handle *dev = NULL;
     int r;
@@ -43,11 +43,10 @@ int main() {
     printf("Claiming interface 0\n");
     libusb_claim_interface(dev, 0);
 
-    // PACKET
-    outbuf[0] = 0x01;
-    outbuf[1] = 0x00;
-    outbuf[2] = 0x00;
-    outbuf[3] = 0x00;
+    // Convert cmd args into packet
+    for (int i = 1; i < argc && i <= 64; i++) {
+        outbuf[i-1] = (unsigned char)strtol(argv[i], NULL, 16);
+    }
     printf("Sending probe packet...\n");
 
     r = libusb_bulk_transfer(
