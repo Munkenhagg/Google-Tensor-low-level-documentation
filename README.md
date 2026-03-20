@@ -26,4 +26,10 @@ My BL1 reverse engineering progress can be found at [BL1 Reverse Engineering Pro
 
 ## Other information
 
+### Other devices
+
 - The VID, PID, and endpoints may not be the same for all devices, as this has only bween done on my pixel 6a which uses the tensor G1. which you can find in the pixel 6 and pixel 6 pro aswell. to tweak it, please follow this [VID, PID and EP guide](https://github.com/Munkenhagg/Google-Tensor-low-level-documentation/blob/main/assets/Find_your_VID_PID_EP.md). though my [VID PID and endpoints can be found here](https://github.com/Munkenhagg/Google-Tensor-low-level-documentation/blob/main/BL1/VID_PID_EP.md)
+
+### New scripts
+
+- I recently upddated the scripts to take less space. old scripts moved to `deprecatedScripts/`. if the new scripts dont work then use the ones from [deprecatedScripts](https://github.com/Munkenhagg/Google-Tensor-low-level-documentation/tree/main/deprecatedScripts)

@@ -13,7 +13,7 @@ to start off. you will need to follow the [How to upload BL1 to bootrom for USB 
 for me i got `0x02 EP 2 OUT` and `0x81 EP 1 IN`
 now to fully verify it is the right endpoint you will need to run `lsusb -v -d DEVICE_ID` but now just while holding the power button, do not uplod bl1 before it **this** time. you will look for the same endpoints. but now the endpoint number could be different, so watch out for that. only use the one after bl1 is uploaded, dosnt matter if its the same tho.
 
-but what probably is differentis the Interrupt(EP 3 IN) endpoint.
+but what probably is different is the Interrupt(EP 3 IN) endpoint.
 so you should check the difference. to make sure it booted BL1 and didnt throw an error. EP 3 IN is not as important but it can be used as a check. as for me
 in bootROM:
     0x83 EP 3 IN

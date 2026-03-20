@@ -4,4 +4,4 @@
 
 - **EP 2 OUT**: **bulk** endpoint, for **data**, **512** bytes at a time - used for sending data from the host(computer) to the pixel
 
-- **EP 3 IN**: **Interrupt** endpoint, for **data**, max 10 bytes at a time - used for signaling like error codes
+- **EP 3 IN**: **Interrupt** endpoint, for **data**, 10 bytes at a time - used for signaling like error codes
