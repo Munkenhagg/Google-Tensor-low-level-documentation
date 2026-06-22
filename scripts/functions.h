@@ -8,11 +8,12 @@ extern int transferred;
 extern unsigned char outbuf[512];
 extern unsigned char inbuf[512];
 
-void recieveBytes();
-void sendBytes();
-void lusbExit();
-void lusbDeviceAttach();
-void lusbInit();
+void recieveBytes(void);
+void sendBytes(void);
+void lusbExit(void);
+void lusbDeviceAttach(void);
+void lusbInit(void);
 void command2packet(int argc, char *argv[]);
-void mainInit();
+void mainInit(void);
+
 #endif

@@ -4,10 +4,10 @@ libusb_context *ctx = NULL;
 libusb_device_handle *dev = NULL;
 int r;
 int transferred;
-unsigned char outbuf[512];
-unsigned char inbuf[512];
+uint8_t outbuf[512];
+uint8_t inbuf[512];
 
-void recieveBytes() {
+void recieveBytes(void) {
     r = libusb_bulk_transfer(
     dev,
     EP_IN,
